@@ -4,7 +4,8 @@ from processworker import Worker as ProcessWorker
 # optional to pass pool_size, wait_time and max_try
 
 class WorkerPool():
-    def __init__(self, is_process=True,is_threaded=False, pool_size=3,wait_time=1,max_try=6,default_start=True):
+    def __init__(self, is_process=True, is_threaded=False, pool_size=3,
+        wait_time=1, max_try=6, default_start=True):
 
         print "WorkerPool created with {} tasks".format(pool_size)
         print "Each Thread will pool in {} sec for tasks".format(wait_time)
