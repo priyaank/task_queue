@@ -29,15 +29,15 @@ class Worker(threading.Thread):
             try:
                 task = self.tasks.get(True,1)
                 self.curret_try = 0
-                print "Processing Task"
-                print "Multiplication of {0} with {1} gives {2}".format(task[0],task[1],(task[0]*task[1]))
+                #print "Processing Task"
+                print "Threaded Multiplication of {0} with {1} gives {2}".format(task[0],task[1],(task[0]*task[1]))
                 time.sleep(0.5)
                 # Let the queue know the task is finished.
                 task.task_done()
             except:
               if self.curret_try < self.max_try and not self.is_stop:
                   self.curret_try += 1
-                  print "TRY {}: Since Nothing is there in Queue wait for {} sec".format(self.curret_try ,self.wait_time)
+                  print "Thread TRY {}: Since Nothing is there in Queue wait for {} sec".format(self.curret_try ,self.wait_time)
                   time.sleep(self.wait_time)
               else:
                 print "Thread Stopped"
