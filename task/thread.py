@@ -31,6 +31,7 @@ class TaskProcessor(threading.Thread):
                 task = self.tasks.get(True,1)
                 self.singlelock.acquire()        # Acquire the lock
                 self.curret_try = 0
+                print "Processing Task"
                 print "Multiplication of {0} with {1} gives {2}".format(task[0],task[1],(task[0]*task[1]))
                 time.sleep(0.5)
                 self.singlelock.release()        # Release the lock
