@@ -133,12 +133,13 @@ class WorkerPool():
 
 if __name__ == '__main__':
     # Call the mainfunction that sets up threading.
-    inputlist_ori = [ (5,5),(10,4),(78,5),(87,2),(65,4),(10,10),(65,2),(88,95),(44,55),(33,3) ]
-    process_test = WorkerPool()
-    process_test.start_processing()
-    process_test.add_tasks(inputlist_ori)
-    process_test.stop_all()
+    #inputlist_ori = [ (5,5),(10,4),(78,5),(87,2),(65,4),(10,10),(65,2),(88,95),(44,55),(33,3) ]
+    #process_test = WorkerPool()
+    #process_test.start_processing()
+    #process_test.add_tasks(inputlist_ori)
+    #process_test.stop_all()
     #time.sleep(10)
     #process_test.add_tasks(inputlist_ori)
+    pass
 
 
