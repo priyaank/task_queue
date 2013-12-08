@@ -1,17 +1,34 @@
+# threading queue test
+# Priyaank Choubey - mail@priyaank.com
+#
+#
+#  WorkerPool.
+#  It creates pool of workes to execute our task that we add.
+
+#  WorkerPool Provided options
+#  is_thread=True        #WorkerPool would be multithreaded, By default it create multiprocessed
+#  pool_size=3           #You can define number of process and threads to run in parellel, By Default its value is 3.
+#  wait_time=1           #You can specify wait time for next pool if TaskQueue is Empty, By Default its value s 1.
+#  max_try=12            #You can specify max_try a worker would try to find task in queue else die.
+                         #By Default its value is 12.
+#  default_start=True    #You can also just initialize WorkerPool without starting workers to start working.
+                         #By default its value is True.
+
+
 from pool.thread import Worker as ThreadWorker
 from pool.process import Worker as ProcessWorker
 from queue.inmemory import TaskQueue
 from task import Task
-# optional to pass pool_size, wait_time and max_try
+
 
 class WorkerPool():
     def __init__(self, is_thread=False, pool_size=3,
         wait_time=1, max_try=12, default_start=True):
 
         print "WorkerPool created with {} tasks".format(pool_size)
-        self.pool_size = pool_size                # This is how many threads we want by Default
-        self.wait_time = wait_time        # This is how much time thread should wait if queue is empty
-        self.max_try = max_try                          # This is maximum number of try a thread will and then go dead
+        self.pool_size = pool_size
+        self.wait_time = wait_time
+        self.max_try = max_try
         self.tasks = TaskQueue()
         self.workers = []
         self._type = "process"
