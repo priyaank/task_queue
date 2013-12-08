@@ -47,7 +47,7 @@ Example to Create MultiProcessed WorkerPool
 	test_worker = WorkerPool()
 
 
-Example to Add Multiple Task in TaskQue
+Example to Add Multiple Task in TaskQueue
      
 	task1 = MultiplyTask(5,7)
 	task2 = MultiplyTask(5,7)
