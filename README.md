@@ -28,14 +28,12 @@ Workers can run in a single process, multiple processes, single thread or multi 
 
     WorkerPool Provided options
 
-    is_thread=True       	WorkerPool would be multithreaded, By default it create multiprocessed
-    pool_size=3          	You can define number of process and threads to run in parellel, By Default its value is 3.
-    wait_time=1          	You can specify wait time for next pool if TaskQueue is Empty, By Default its value s 1.
-    max_try=12           	You can specify max_try a worker would try to find task in queue else die.
-    				By Default its value is 12.
-    default_start=True   	You can also just initialize WorkerPool without starting workers to start working.
-				By default its value is True.
-
+    is_thread=True      WorkerPool would be multithreaded, By default it create multiprocessed
+    pool_size=3         You can define number of process and threads to run in parellel, Default 3.
+    wait_time=1         You can specify wait time for next pool if TaskQueue is Empty, Default 1.
+    max_try=12		You can specify max_try a worker would try to find task in queue else die. Default 12.
+    default_start=True  You can also just initialize WorkerPool without starting workers to start working. Deafult True
+				
 
 Example to Create Multithreaded WorkerPool
 
